@@ -1,0 +1,13 @@
+version: '3'
+services:
+  jenkins:
+    container_name: node_app
+    image: node_image
+    build:
+      context: .     
+    ports:
+      - "8080:8080"
+    networks:
+      - net
+networks:
+  net:
